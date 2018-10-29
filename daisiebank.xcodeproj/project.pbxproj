@@ -14,6 +14,7 @@
 		3F4C7C1E21874E8800EF5E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1C21874E8800EF5E12 /* LaunchScreen.storyboard */; };
 		3F4C7C2921874E8800EF5E12 /* daisiebankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C2821874E8800EF5E12 /* daisiebankTests.swift */; };
 		3F4C7C3421874E8800EF5E12 /* daisiebankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C3321874E8800EF5E12 /* daisiebankUITests.swift */; };
+		3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C43218766A900EF5E12 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F4C7C2F21874E8800EF5E12 /* daisiebankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = daisiebankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C7C3321874E8800EF5E12 /* daisiebankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daisiebankUITests.swift; sourceTree = "<group>"; };
 		3F4C7C3521874E8800EF5E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4C7C43218766A900EF5E12 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3F4C7C1321874E8700EF5E12 /* AppDelegate.swift */,
 				3F4C7C1521874E8700EF5E12 /* ViewController.swift */,
+				3F4C7C43218766A900EF5E12 /* TransactionModel.swift */,
 				3F4C7C1721874E8700EF5E12 /* Main.storyboard */,
 				3F4C7C1A21874E8800EF5E12 /* Assets.xcassets */,
 				3F4C7C1C21874E8800EF5E12 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */,
 				3F4C7C1621874E8700EF5E12 /* ViewController.swift in Sources */,
 				3F4C7C1421874E8700EF5E12 /* AppDelegate.swift in Sources */,
 			);
