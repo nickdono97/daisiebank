@@ -7,46 +7,44 @@
 //
 
 import Foundation
+//MARK: - Transaction strucs
+struct TransactionResult:Codable {
+    let transactions:[Transaction]
+}
+
+struct Transaction:Codable {
+    let id:String
+    let amount:Int
+    let currency:String
+    let merchant:Merchant
+    let description:String
+    let created:String
+    let settled:String
+    let notes:String
+}
+
+struct Merchant:Codable {
+    let id:String
+//    let address:Address
+    let name:String
+    let category:String
+    let logo:URL
+    let created:String
+
+}
+
+struct Address:Codable {
+    let address:String
+    let city:String
+    let country:String
+    let latitude:Float
+    let longitude:Float
+    let postcode: String
+    let region:String
+}
+
+//MARK: - Transaction manager
 class TransactionManager {
-    //MARK: - Transaction strucs
-    struct Transaction {
-        let id:String
-        let amount:Int
-        let currency:String
-        let merchant:Merchant
-        let description:String
-        let created:Date
-        let settled:Date
-        let notes:String
-    }
-    
-    struct Merchant {
-        let id:String
-        let address:Address
-        let name:String
-        let category:String
-        let logo:URL
-        let created:Date
-    }
-    
-    struct Address {
-        let street:String
-        let city:String
-        let country:String
-        let latitude:Float
-        let longitude:Float
-        let postCode: String
-        let region:String
-    }
-    class var sharedInstance: TransactionManager {
-        struct Singleton {
-            static let instance = TransactionManager()
-        }
-        return Singleton.instance
-    }
-    //MARK: - Transaction methods
-    
-    
     /// Get all transactions from backend
     ///
     /// - Parameters:
@@ -54,22 +52,22 @@ class TransactionManager {
     ///   - failureCallback: failing request returns error message as String
     func getAllTransactions(onSuccess successCallback: @escaping ((_ transactions: Data) -> Void),
                             onFailure failureCallback: @escaping ((_ errorMessage: String) -> Void)){
-        
-        if let transactionUrl = URL.init(string: "https://daisie-ios.glitch.me/transactions"){
-            var transactionRequest:URLRequest = URLRequest.init(url: transactionUrl)
-            transactionRequest.httpMethod = "GET"
-            URLSession.shared.dataTask(with: transactionRequest) { (jsonData, urlResponse, error) in
-                let httpResponse = urlResponse as? HTTPURLResponse
-                if httpResponse?.statusCode == 200{
-                    if let jsonData = jsonData{
-                        successCallback(jsonData)
-                    }
-                }else{
-                    failureCallback(String(format: "Backend error - Status code: %d", httpResponse?.statusCode ?? 0))
-                }
-                failureCallback("URL error - URL not avaliable")
+        guard let transactionUrl = URL.init(string: "https://daisie-ios.glitch.me/transactions") else {return}
+        var transactionRequest:URLRequest = URLRequest.init(url: transactionUrl)
+        transactionRequest.httpMethod = "GET"
+
+        URLSession.shared.dataTask(with: transactionRequest) { (jsonData, urlResponse, error) in
+            //Return HTTP response from server - check status code is OK
+            let httpResponse = urlResponse as? HTTPURLResponse
+            if httpResponse?.statusCode == 200{
+                guard let jsonData = jsonData else {return}
+                    //Return JSON data
+                    successCallback(jsonData)
+            }else{
+                //Request or server error return status code
+                failureCallback(String(format: "Backend error - Status code: %d", httpResponse?.statusCode ?? 0))
             }
-        }
+        }.resume()
     }
 }
 

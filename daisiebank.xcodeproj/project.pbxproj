@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2DE36821884ADB007C4182 /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */; };
 		3F4C7C1421874E8700EF5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1321874E8700EF5E12 /* AppDelegate.swift */; };
-		3F4C7C1621874E8700EF5E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1521874E8700EF5E12 /* ViewController.swift */; };
 		3F4C7C1921874E8700EF5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1721874E8700EF5E12 /* Main.storyboard */; };
 		3F4C7C1B21874E8800EF5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1A21874E8800EF5E12 /* Assets.xcassets */; };
 		3F4C7C1E21874E8800EF5E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C7C1C21874E8800EF5E12 /* LaunchScreen.storyboard */; };
 		3F4C7C2921874E8800EF5E12 /* daisiebankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C2821874E8800EF5E12 /* daisiebankTests.swift */; };
 		3F4C7C3421874E8800EF5E12 /* daisiebankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C3321874E8800EF5E12 /* daisiebankUITests.swift */; };
 		3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C7C43218766A900EF5E12 /* TransactionModel.swift */; };
+		3FECC1A821890498000E1C53 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC1A721890498000E1C53 /* TransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
 		3F4C7C1021874E8700EF5E12 /* daisiebank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daisiebank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C7C1321874E8700EF5E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F4C7C1521874E8700EF5E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F4C7C1821874E8700EF5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F4C7C1A21874E8800EF5E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4C7C1D21874E8800EF5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		3F4C7C3321874E8800EF5E12 /* daisiebankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daisiebankUITests.swift; sourceTree = "<group>"; };
 		3F4C7C3521874E8800EF5E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4C7C43218766A900EF5E12 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		3FECC1A721890498000E1C53 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				3F4C7C1321874E8700EF5E12 /* AppDelegate.swift */,
-				3F4C7C1521874E8700EF5E12 /* ViewController.swift */,
 				3F4C7C43218766A900EF5E12 /* TransactionModel.swift */,
+				3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */,
+				3FECC1A721890498000E1C53 /* TransactionViewController.swift */,
 				3F4C7C1721874E8700EF5E12 /* Main.storyboard */,
 				3F4C7C1A21874E8800EF5E12 /* Assets.xcassets */,
 				3F4C7C1C21874E8800EF5E12 /* LaunchScreen.storyboard */,
@@ -259,9 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FECC1A821890498000E1C53 /* TransactionViewController.swift in Sources */,
 				3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */,
-				3F4C7C1621874E8700EF5E12 /* ViewController.swift in Sources */,
 				3F4C7C1421874E8700EF5E12 /* AppDelegate.swift in Sources */,
+				3F2DE36821884ADB007C4182 /* TransactionPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
