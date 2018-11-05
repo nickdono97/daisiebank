@@ -22,16 +22,14 @@ class MasterTabBarController: UITabBarController {
         tabBar.tintColor = Stylesheet.Colors.ButtonPurple
         
         //Set up tab bar view controllers with tab items
-        if let transactionViewController = TransactionViewController.storyboardInstance(){
-            transactionViewController.tabBarItem = UITabBarItem.init(title: "Transactions", image: UIImage.init(named: "home"), tag: 0)
-            let controllers = [transactionViewController]
-            selectedIndex = 0
-            viewControllers = controllers
-            
-
-        }else{
-            //Error view
-            
-        }
+        let transactionViewController = TransactionViewController.storyboardInstance()
+        transactionViewController?.tabBarItem = UITabBarItem.init(title: "Transactions", image: UIImage.init(named: "home"), tag: 0)
+        
+        let cardViewController = CardViewController.storyboardInstance()
+        cardViewController?.tabBarItem = UITabBarItem.init(title: "Card", image: UIImage.init(named: "card"), tag: 1)
+        
+        let controllers = [transactionViewController,cardViewController]
+        selectedIndex = 0
+        viewControllers = controllers as? [UIViewController]
     }
 }

@@ -19,6 +19,8 @@
 		3FECC1AC2189190E000E1C53 /* MasterTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FECC1AB2189190E000E1C53 /* MasterTabBarController.storyboard */; };
 		3FECC1AE21891936000E1C53 /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC1AD21891936000E1C53 /* MasterTabBarController.swift */; };
 		3FECC1B221893DF8000E1C53 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC1B121893DF8000E1C53 /* Stylesheet.swift */; };
+		3FECC21221906CE2000E1C53 /* CardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FECC21121906CE2000E1C53 /* CardViewController.storyboard */; };
+		3FECC21521906D02000E1C53 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC21421906D02000E1C53 /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3FECC1AB2189190E000E1C53 /* MasterTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MasterTabBarController.storyboard; sourceTree = "<group>"; };
 		3FECC1AD21891936000E1C53 /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
 		3FECC1B121893DF8000E1C53 /* Stylesheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
+		3FECC21121906CE2000E1C53 /* CardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardViewController.storyboard; sourceTree = "<group>"; };
+		3FECC21421906D02000E1C53 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				3F4C7C1321874E8700EF5E12 /* AppDelegate.swift */,
-				3F4C7C43218766A900EF5E12 /* TransactionModel.swift */,
-				3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */,
-				3FECC1A721890498000E1C53 /* TransactionViewController.swift */,
-				3FECC1A921891327000E1C53 /* TransactionViewController.storyboard */,
+				3FECC21321906CEB000E1C53 /* Transaction View */,
+				3FECC21121906CE2000E1C53 /* CardViewController.storyboard */,
+				3FECC21421906D02000E1C53 /* CardViewController.swift */,
 				3FECC1AB2189190E000E1C53 /* MasterTabBarController.storyboard */,
 				3FECC1AD21891936000E1C53 /* MasterTabBarController.swift */,
 				3FECC1B121893DF8000E1C53 /* Stylesheet.swift */,
@@ -138,6 +141,17 @@
 				3F4C7C3521874E8800EF5E12 /* Info.plist */,
 			);
 			path = daisiebankUITests;
+			sourceTree = "<group>";
+		};
+		3FECC21321906CEB000E1C53 /* Transaction View */ = {
+			isa = PBXGroup;
+			children = (
+				3F4C7C43218766A900EF5E12 /* TransactionModel.swift */,
+				3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */,
+				3FECC1A721890498000E1C53 /* TransactionViewController.swift */,
+				3FECC1A921891327000E1C53 /* TransactionViewController.storyboard */,
+			);
+			path = "Transaction View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +262,7 @@
 				3FECC1AA21891327000E1C53 /* TransactionViewController.storyboard in Resources */,
 				3F4C7C1E21874E8800EF5E12 /* LaunchScreen.storyboard in Resources */,
 				3F4C7C1B21874E8800EF5E12 /* Assets.xcassets in Resources */,
+				3FECC21221906CE2000E1C53 /* CardViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FECC1A821890498000E1C53 /* TransactionViewController.swift in Sources */,
+				3FECC21521906D02000E1C53 /* CardViewController.swift in Sources */,
 				3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */,
 				3FECC1AE21891936000E1C53 /* MasterTabBarController.swift in Sources */,
 				3F4C7C1421874E8700EF5E12 /* AppDelegate.swift in Sources */,
