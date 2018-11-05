@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghG-fY-eOK">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="BGS-ae-zW5">
+            <objects>
+                <viewController id="ghG-fY-eOK" customClass="CardViewController" customModule="daisiebank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0jt-87-bFu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="wRO-XT-J9y">
+                                <rect key="frame" x="77.666666666666686" y="254" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="6fH-w2-tWb"/>
+                                    <constraint firstAttribute="height" constant="220" id="eSg-MQ-DJb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: £7.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rim-oV-rkO">
+                                <rect key="frame" x="56" y="522" width="263" height="44.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2mM-nT-ed0">
+                                <rect key="frame" x="16" y="60" width="343" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcc-aP-Ttu">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ACA-ml-VJw"/>
+                                            <constraint firstAttribute="height" constant="60" id="iwg-oB-rDo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="MpG-Bd-e6h">
+                                        <rect key="frame" x="70" y="0.0" width="273" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nick Donovan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsT-Rg-jRg">
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@nick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjM-nq-X5c">
+                                                <rect key="frame" x="0.0" y="35.666666666666671" width="273" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-QN-m7M">
+                                <rect key="frame" x="16" y="136" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="OVw-DF-7G3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <state key="normal" title="Add money"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rim-oV-rkO" firstAttribute="leading" secondItem="38w-BO-CrF" secondAttribute="leading" constant="56" id="5zB-DW-bS8"/>
+                            <constraint firstItem="38w-BO-CrF" firstAttribute="trailing" secondItem="b0T-QN-m7M" secondAttribute="trailing" constant="16" id="8km-X5-ZtD"/>
+                            <constraint firstItem="38w-BO-CrF" firstAttribute="trailing" secondItem="rim-oV-rkO" secondAttribute="trailing" constant="56" id="94s-9a-J2G"/>
+                            <constraint firstItem="b0T-QN-m7M" firstAttribute="leading" secondItem="38w-BO-CrF" secondAttribute="leading" constant="16" id="FAD-oo-MGB"/>
+                            <constraint firstItem="38w-BO-CrF" firstAttribute="trailing" secondItem="2mM-nT-ed0" secondAttribute="trailing" constant="16" id="GDh-Gu-oj0"/>
+                            <constraint firstItem="wRO-XT-J9y" firstAttribute="top" secondItem="b0T-QN-m7M" secondAttribute="bottom" constant="77" id="MaF-8I-MYo"/>
+                            <constraint firstItem="2mM-nT-ed0" firstAttribute="leading" secondItem="38w-BO-CrF" secondAttribute="leading" constant="16" id="P7O-xC-btg"/>
+                            <constraint firstItem="rim-oV-rkO" firstAttribute="centerX" secondItem="0jt-87-bFu" secondAttribute="centerX" id="UmO-ha-e1X"/>
+                            <constraint firstItem="rim-oV-rkO" firstAttribute="top" secondItem="wRO-XT-J9y" secondAttribute="bottom" constant="48" id="ene-vo-psK"/>
+                            <constraint firstItem="b0T-QN-m7M" firstAttribute="top" secondItem="2mM-nT-ed0" secondAttribute="bottom" constant="16" id="jSN-3s-G0a"/>
+                            <constraint firstItem="wRO-XT-J9y" firstAttribute="centerX" secondItem="0jt-87-bFu" secondAttribute="centerX" id="pFH-lj-Vs7"/>
+                            <constraint firstItem="2mM-nT-ed0" firstAttribute="top" secondItem="38w-BO-CrF" secondAttribute="top" constant="16" id="tba-eE-Sej"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="38w-BO-CrF"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addMoneyButton" destination="b0T-QN-m7M" id="ZGO-Q3-OE1"/>
+                        <outlet property="balanceLabel" destination="rim-oV-rkO" id="FSs-cH-r7R"/>
+                        <outlet property="upnLabel" destination="gjM-nq-X5c" id="QyC-Lo-dzi"/>
+                        <outlet property="userImageView" destination="wcc-aP-Ttu" id="sjJ-4g-Mpl"/>
+                        <outlet property="userNameLabel" destination="KsT-Rg-jRg" id="gWu-bQ-e9X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnB-6T-4k0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="61.619190404797607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mastercard" width="256" height="256"/>
+    </resources>
+</document>

@@ -36,6 +36,7 @@ class TransactionViewController: UIViewController{
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.tableFooterView = UIView()
         
         self.balanceLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFont.Weight.medium)
         self.balanceLabel.textColor = UIColor.darkGray
@@ -75,6 +76,10 @@ extension TransactionViewController: UITableViewDataSource,UITableViewDelegate{
         cell.merchantNameLabel.text = transaction?.merchant.name
         cell.costLabel.text = transactionPresenter.convertPenceToPounds(pence: transaction?.amount ?? 0)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
