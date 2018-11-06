@@ -22,6 +22,7 @@ class CardViewController: UIViewController{
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.userImageView.contentMode = .scaleAspectFill
         self.userImageView.image = UIImage(named: "placeholder")
         self.userImageView.clipsToBounds = true

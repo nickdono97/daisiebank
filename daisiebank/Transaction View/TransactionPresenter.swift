@@ -105,4 +105,19 @@ class TransactionPresenter {
             return ""
         }
     }
+    
+    func getTransactionImage(imageURL:URL,
+                             onSuccess successCallback: @escaping ((_ image: UIImage) -> Void)){
+        self.transactionManager.getTransactionImage(imageURL: imageURL, onSuccess: { (imageData) in
+            if let image = UIImage(data: imageData){
+                successCallback(image)
+            }else{
+                guard let image = UIImage(named: "placeholder")else{return}
+                successCallback(image)
+            }
+        }) { (errorMessage) in
+            guard let image = UIImage(named: "placeholder")else{return}
+            successCallback(image)
+        }
+    }
 }

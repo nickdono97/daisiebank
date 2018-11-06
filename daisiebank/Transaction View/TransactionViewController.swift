@@ -75,18 +75,25 @@ extension TransactionViewController: UITableViewDataSource,UITableViewDelegate{
         let transaction = transactionArray?[indexPath.row]
         cell.merchantNameLabel.text = transaction?.merchant.name
         cell.costLabel.text = transactionPresenter.convertPenceToPounds(pence: transaction?.amount ?? 0)
+        
+        self.transactionPresenter.getTransactionImage(imageURL: (transaction?.merchant.logo)!) { (image) in
+            DispatchQueue.main.async {
+                cell.merchantImageView.image = image
+            }
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+//        self.performSegue(withIdentifier: "transactionDetail", sender: self)
     }
 }
 
 //MARK: - View Protocol Methods
 extension TransactionViewController: TransactionView {
     func showTransactions(sections: [Date], transactionDict: [Date : [Transaction]]) {
-        print("SHOW TRANSACTIONS")
         self.sectionTitles = sections
         self.transactionDict = transactionDict
         DispatchQueue.main.async {

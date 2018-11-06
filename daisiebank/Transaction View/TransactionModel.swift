@@ -60,7 +60,7 @@ struct Transaction:Codable {
 
 struct Merchant:Codable {
     let id:String
-//    let address:Address
+    let address:Address
     let name:String
     let category:String
     let logo:URL
@@ -71,7 +71,7 @@ struct Merchant:Codable {
         //Set up json parsing from API
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
-//        address = try container.decode(Address.self, forKey: .address)
+        address = try container.decode(Address.self, forKey: .address)
         name = try container.decode(String.self, forKey: .name)
         category = try container.decode(String.self, forKey: .category)
         
@@ -103,7 +103,7 @@ struct Merchant:Codable {
 }
 struct Address:Codable {
     //This does not need parsing due to correct object type and property names
-//    let address:String
+    let street:String
     let city:String
     let country:String
     let latitude:Float
@@ -146,7 +146,7 @@ class TransactionManager {
     ///   - successCallback: successful request returns encoded image data
     ///   - failureCallback: failing request sends message to presenter to show default image
     func getTransactionImage(imageURL:URL,
-                             onSuccess successCallback: @escaping ((_ transactions: Data) -> Void),
+                             onSuccess successCallback: @escaping ((_ imageData: Data) -> Void),
                              onFailure failureCallback: @escaping ((_ errorMessage: String) -> Void)){
         
         var imageRequest = URLRequest.init(url: imageURL)

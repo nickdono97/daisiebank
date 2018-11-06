@@ -22,6 +22,8 @@
 		3FECC21221906CE2000E1C53 /* CardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FECC21121906CE2000E1C53 /* CardViewController.storyboard */; };
 		3FECC21521906D02000E1C53 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC21421906D02000E1C53 /* CardViewController.swift */; };
 		3FECC21921907070000E1C53 /* CardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC21821907070000E1C53 /* CardPresenter.swift */; };
+		3FECC2232190AA44000E1C53 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC2222190AA44000E1C53 /* TransactionDetailViewController.swift */; };
+		3FECC2252190AA64000E1C53 /* TransactionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC2242190AA64000E1C53 /* TransactionDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		3FECC21121906CE2000E1C53 /* CardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardViewController.storyboard; sourceTree = "<group>"; };
 		3FECC21421906D02000E1C53 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		3FECC21821907070000E1C53 /* CardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresenter.swift; sourceTree = "<group>"; };
+		3FECC2222190AA44000E1C53 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		3FECC2242190AA64000E1C53 /* TransactionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 				3F2DE36721884ADB007C4182 /* TransactionPresenter.swift */,
 				3FECC1A721890498000E1C53 /* TransactionViewController.swift */,
 				3FECC1A921891327000E1C53 /* TransactionViewController.storyboard */,
+				3FECC2222190AA44000E1C53 /* TransactionDetailViewController.swift */,
+				3FECC2242190AA64000E1C53 /* TransactionDetailPresenter.swift */,
 			);
 			path = "Transaction View";
 			sourceTree = "<group>";
@@ -298,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FECC2252190AA64000E1C53 /* TransactionDetailPresenter.swift in Sources */,
 				3FECC21921907070000E1C53 /* CardPresenter.swift in Sources */,
 				3FECC1A821890498000E1C53 /* TransactionViewController.swift in Sources */,
 				3FECC21521906D02000E1C53 /* CardViewController.swift in Sources */,
 				3F4C7C44218766A900EF5E12 /* TransactionModel.swift in Sources */,
+				3FECC2232190AA44000E1C53 /* TransactionDetailViewController.swift in Sources */,
 				3FECC1AE21891936000E1C53 /* MasterTabBarController.swift in Sources */,
 				3F4C7C1421874E8700EF5E12 /* AppDelegate.swift in Sources */,
 				3F2DE36821884ADB007C4182 /* TransactionPresenter.swift in Sources */,
